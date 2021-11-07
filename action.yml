@@ -2,7 +2,7 @@ name: "Rook Webook"
 description: "Send a signed payload to a rook endpoint"
 inputs:
   endpoint:
-    description: 'endpoint and path of the server listening for rook webhooks'
+    description: 'endpoint listening for rook webhooks'
     required: true
   secret:
     description: 'shared secret used to sign the payload'
