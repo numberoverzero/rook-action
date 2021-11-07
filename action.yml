@@ -12,4 +12,4 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'docker://numberoverzero/rook-action:v5'
+  image: 'docker://numberoverzero/rook-action:v6'
