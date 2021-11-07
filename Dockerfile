@@ -12,6 +12,6 @@ COPY src ./src
 RUN cargo install --target x86_64-unknown-linux-musl --path .
 
 FROM scratch
-COPY --from=build /usr/local/cargo/bin/rook-action .
+COPY --from=build /usr/local/cargo/bin/rook-action /
 USER 1000
-ENTRYPOINT ["./rook-action"]
+ENTRYPOINT ["/rook-action"]
