@@ -1,0 +1,19 @@
+name: "Rook Webook"
+description: "Send a signed payload to a rook endpoint"
+inputs:
+  endpoint:
+    description: 'endpoint and path of the server listening for rook webhooks'
+    required: true
+  secret:
+    description: 'shared secret used to sign the payload'
+    required: true
+  payload:
+    description: 'args that will be passed to the executing rook script (split using shlex)'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.endpoint }}
+    - ${{ inputs.secret }}
+    - ${{ inputs.payload }}
