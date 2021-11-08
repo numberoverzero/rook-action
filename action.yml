@@ -1,15 +1,15 @@
 name: "Rook Webook"
-description: "Send a signed payload to a rook endpoint"
+description: "Send a signed post body to an endpoint"
 inputs:
   endpoint:
-    description: 'endpoint listening for rook webhooks'
+    description: 'endpoint listening for signed webhooks'
     required: true
   secret:
-    description: 'shared secret used to sign the payload'
+    description: 'shared secret used to sign the body'
     required: true
-  payload:
-    description: 'args that will be passed to the executing rook script (split using shlex)'
+  body:
+    description: 'request body.  A rook server will export this as $ROOK_INPUT'
     required: true
 runs:
   using: 'docker'
-  image: 'docker://numberoverzero/rook-action:v6'
+  image: 'docker://numberoverzero/rook-action:v1'
