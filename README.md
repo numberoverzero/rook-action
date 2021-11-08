@@ -39,13 +39,17 @@ jobs:
 For the request body `"hello, world"` and the secret `"hunter2"` the signature (hmac sha256) is:
 
 ```
-HMAC-SHA256("hunter2", "hello, world") = b157643c98205db6da3655511665a993ba5dc34d056233f3319622f5a32f704b
+HMAC-SHA256("hunter2", "hello, world")
+  = b157643c98205db6da3655511665a993ba5dc34d056233f3319622f5a32f704b
 ```
 
 Therefore the following curl request and sample config are equivalent:
 
 ```sh
-curl -X POST http://your-endpoint.com:9000/some/path -H "x-rook-signature-256: sha256=b157643c98205db6da3655511665a993ba5dc34d056233f3319622f5a32f704b" -d "hello, world"
+curl -X POST \
+  http://your-endpoint.com:9000/some/path \
+  -H "x-rook-signature-256: sha256=b157643c98205db6da3655511665a993ba5dc34d056233f3319622f5a32f704b" \
+  -d "hello, world"
 ```
 
 ```yml
