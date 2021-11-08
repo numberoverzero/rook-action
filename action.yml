@@ -1,4 +1,7 @@
 name: "Rook Webook"
+branding:
+  icon: 'anchor'
+  color: 'purple'
 description: "Send a signed post body to an endpoint"
 inputs:
   endpoint:
