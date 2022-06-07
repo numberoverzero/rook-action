@@ -1,4 +1,4 @@
-use hmac::{Hmac, Mac, NewMac};
+use hmac::{Hmac, Mac};
 use reqwest::header::HeaderValue;
 use sha2::Sha256;
 
