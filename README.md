@@ -31,7 +31,7 @@ jobs:
         with:
           endpoint: ${{ env.STATUS_ENDPOINT }}
           secret: ${{ secrets.ROOK_SHARED_SECRET }}
-          body: "job ${{ env.GITHUB_JOB }} has completed"
+          body: "github run ${{ github.RUN_ID }} has completed"
 ```
 
 ## Curl equivalent
