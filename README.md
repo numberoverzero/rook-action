@@ -31,7 +31,7 @@ jobs:
         with:
           endpoint: ${{ env.STATUS_ENDPOINT }}
           secret: ${{ secrets.ROOK_SHARED_SECRET }}
-          payload: "job ${{ env.GITHUB_JOB }} has completed"
+          body: "job ${{ env.GITHUB_JOB }} has completed"
 ```
 
 ## Curl equivalent
@@ -59,7 +59,7 @@ curl -X POST \
         with:
           endpoint: "http://your-endpoint.com:9000/some/path"
           secret: "hunter2"
-          payload: "hello, world"
+          body: "hello, world"
 ```
 
 # I don't have a thing that listens for webhooks yet
