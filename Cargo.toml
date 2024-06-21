@@ -1,9 +1,20 @@
 [package]
 name = "rook-action"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 
 [dependencies]
 hmac = { version = "0.12" }
 sha2 = { version = "0.10" }
-reqwest = { version = "0.11", features = ["blocking", "rustls-tls"], default-features = false }
+reqwest = { version = "0.12", features = ["blocking", "rustls-tls"], default-features = false }
+
+[build]
+target = "x86_64-unknown-linux-musl"
+rustflags = ["-Zlocation-detail=none"]
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "z"
+panic = "abort"
+strip = true
