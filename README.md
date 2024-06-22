@@ -64,4 +64,4 @@ curl -X POST \
 
 # I don't have a thing that listens for webhooks yet
 
-Set one up in 5 minutes with [rook](https://github.com/numberoverzero/rook).  7 lines in a config file, a 5MB binary, and you'll be processing authenticated webhooks.
+Set one up in 5 minutes with [rook](https://github.com/numberoverzero/rook).  7 lines in a config file, a 200KB binary, and you'll be processing authenticated webhooks.
