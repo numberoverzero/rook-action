@@ -1,7 +1,7 @@
 # A very fast github action to send signed post requests with bodies
 
 * Runs in ~0sec.  Uses a static rust binary to sign your POST body and send it to your endpoint.
-* 900kB docker image prebuilt `FROM scratch`
+* 680kB docker image prebuilt `FROM scratch`
 * Simple, readable source (~200 lines)
 
 The signature is a simple [HMAC-SHA256](https://en.wikipedia.org/wiki/HMAC) with the same header structure as github's signed events.  The value is passed in the `"x-rook-signature-256"` header, prepended with `"sha256="`.
